@@ -1,0 +1,22 @@
+$app-colors: (
+        main: #222222,
+        secondary: #333333,
+        black: #000000,
+        white: #FFFFFFFF,
+        greyWhite: #DDDDDDFF,
+        grey: #3A3939,
+        lightGrey: #9D9D9DFF,
+        coral: #F47E60,
+        darkSkyBlue: #2B95ADFF,
+        blue: #0056B3,
+        muiBlue: #1976D2,
+        greyBlue: #467BB466,
+        red: #D32F2FFF,
+        darkRed: #8B0000FF,
+        green: #2cb032,
+        darkGreen: #2e7d32,
+);
+
+@function color($color, $opacity: 1) {
+  @return rgba(map-get($app-colors, $color), $opacity);
+}

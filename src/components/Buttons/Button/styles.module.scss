@@ -1,0 +1,28 @@
+@import "../../../styles/settings/settings.scss";
+
+$font-size: 14px;
+
+.btn-wrapper {
+  position: relative;
+
+  &.disabled {
+    :global .MuiButtonBase-root {
+      color: color(white, .5);
+    }
+  }
+
+  .loader {
+    :global .icon {
+      @include icon-size(calc(#{$font-size + 8px}));
+      color: color(white);
+      padding: 0;
+    }
+  }
+
+  .content {
+    font-size: $font-size;
+    &.loading {
+      visibility: hidden;
+    }
+  }
+}

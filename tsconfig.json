@@ -27,6 +27,7 @@
     "declaration": true,
     "esModuleInterop": true,
     "declarationMap": true,
+    /* Paths */
     "baseUrl": ".",
     "paths": {
       "shared-components": [

@@ -1,11 +1,47 @@
-import React from 'react'
+import { ButtonProps, } from "@mui/material";
+import classNames from "classnames";
+import React, { FC } from "react";
+import styles from "./styles.module.scss";
 
-export interface ButtonProps {
-  text?: string;
+export interface SharedButtonProps extends ButtonProps {
+  wrapperClassName?: string;
+  isLoading?: boolean;
+  className?: string;
+  disabled?: boolean;
+  children?: React.ReactNode;
 }
 
-export const Button: React.FC<ButtonProps> = ({ text }) => {
+export const SharedButton: FC<SharedButtonProps> = ({
+  className,
+  wrapperClassName,
+  disabled,
+  isLoading,
+  children,
+  ...props
+}) => {
   return (
-    <button>{text}</button>
-  )
-}
+    <div
+      className={classNames(styles["btn-wrapper"], wrapperClassName, {
+        [styles["disabled"]]: disabled,
+      })}
+    >
+      <button
+        {...props}
+        className={classNames(styles["button"], className, {
+          [styles["disabled"]]: disabled,
+        })}
+        disabled={disabled}
+      >
+        {/* {isLoading && <Loader className={styles["loader"]} absolute />} */}
+        <div
+          className={classNames(styles["content"], {
+            [styles["loading"]]: isLoading,
+          })}
+        >
+          {children}
+        </div>
+      </button>
+    </div>
+  );
+};
+
