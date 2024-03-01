@@ -10,7 +10,7 @@ export default defineConfig(() => ({
     react(),
     tsConfigPaths(),
     dts({
-      include: ["index.ts"],
+      include: ["src/components", "index.ts"],
     }),
   ],
   resolve: {
