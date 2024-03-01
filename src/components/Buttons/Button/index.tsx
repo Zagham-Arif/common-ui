@@ -1,4 +1,4 @@
-import { ButtonProps, } from "@mui/material";
+import { ButtonProps, Button as MuiButton } from "@mui/material";
 import classNames from "classnames";
 import React, { FC } from "react";
 import styles from "./styles.module.scss";
@@ -25,7 +25,7 @@ export const SharedButton: FC<SharedButtonProps> = ({
         [styles["disabled"]]: disabled,
       })}
     >
-      <button
+      <MuiButton
         {...props}
         className={classNames(styles["button"], className, {
           [styles["disabled"]]: disabled,
@@ -40,7 +40,7 @@ export const SharedButton: FC<SharedButtonProps> = ({
         >
           {children}
         </div>
-      </button>
+      </MuiButton>
     </div>
   );
 };
