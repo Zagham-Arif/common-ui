@@ -15,15 +15,15 @@ export default defineConfig(() => ({
   ],
   resolve: {
     alias: {
-      "common-ui": resolve(__dirname, "index.ts"),
+      "shared-components": resolve(__dirname, "index.ts"),
     },
   },
   build: {
     lib: {
       entry: resolve("index.ts"),
-      name: "common-ui",
+      name: "shared-components",
       formats: ["es", "umd"],
-      fileName: (format) => `common-ui.${format}.js`,
+      fileName: (format) => `shared-components.${format}.js`,
     },
     rollupOptions: {
       external: [...Object.keys(packageJson.peerDependencies)],

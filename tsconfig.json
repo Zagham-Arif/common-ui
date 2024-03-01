@@ -29,7 +29,7 @@
     "declarationMap": true,
     "baseUrl": ".",
     "paths": {
-      "common-ui": [
+      "shared-components": [
         "./index.ts"
       ]
     },

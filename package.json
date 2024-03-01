@@ -1,5 +1,5 @@
 {
-  "name": "common-ui",
+  "name": "shared-components",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -15,12 +15,12 @@
   ],
   "exports": {
     ".": {
-      "import": "./dist/common-ui.es.js",
-      "require": "./dist/common-ui.umd.js"
+      "import": "./dist/shared-components.es.js",
+      "require": "./dist/shared-components.umd.js"
     }
   },
-  "main": "./dist/common-ui.umd.js",
-  "module": "./dist/common-ui.es.js",
+  "main": "./dist/shared-components.umd.js",
+  "module": "./dist/shared-components.es.js",
   "types": "./dist/index.d.ts",
   "devDependencies": {
     "@types/node": "^20.11.24",
